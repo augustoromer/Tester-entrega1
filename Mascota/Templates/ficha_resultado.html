@@ -1,0 +1,38 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia%}
+
+<div style = "padding: 20px 40px;">
+
+    <div style = "padding: 20px 80px;border-color: BLACK;border-width: 5px;border-style: solid;">
+
+        <p>Estamos buscando la Ficha Veterinaria : {{registro}} </p>
+
+        {% if fichas %}
+
+        <ul>
+
+            {%for ficha in fichas %}
+
+                <li> {{ficha.registro}} </li>
+                <li> {{ficha.vacunas}} </li>
+                <li> {{ficha.desparasitacion}} </li>
+                <li> {{ficha.castracion}} </li>
+                <li> {{ficha.observaciones}}</li>
+                <br>
+   
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+
+        <p>No se encontro la Ficha</p>
+
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

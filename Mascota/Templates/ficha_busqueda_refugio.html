@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia%}
+
+<div style = "padding: 20px 40px;">
+
+    <form action="{% url "buscar-refugio" %}" method="GET"  style = "padding: 20px 80px;border-color: BLACK;border-width: 5px;border-style: solid;"> {% csrf_token %}
+
+        <p>Ficha de Refugio: <input type ="text" name="nombre" id="nombre"></p>
+     
+         <input type="submit"  value="Buscar">
+     
+     
+     </form>
+     
+</div>
+{%endblock%}
