@@ -61,7 +61,7 @@ def buscar_ficha (request):
     else:
         respuesta ="No enviaste datos"
 
-    return HttpResponse (respuesta)
+    return render (request, "inicio.html", {"respuesta": respuesta})
 
 
 def Ficha_refugio (request):
@@ -106,7 +106,7 @@ def buscar_refugio (request):
     else:
         respuesta ="No enviaste datos"
 
-    return HttpResponse (respuesta)
+    return render (request, "inicio.html", {"respuesta": respuesta})
 
 
 #  Products.objects.create(
